@@ -31,5 +31,5 @@
 use <code>timebomb help</code> to get help
 </p>
 
-<h1>ScreenShot<h1>
+<h1>Screenshot<h1>
 <img src="https://i.postimg.cc/R0yLHWYL/image-2022-09-13-215408714.png" alt="Screen Shot Help">
