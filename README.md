@@ -13,7 +13,7 @@
 <h3>Commands</h3>
 <p>
 • <code>git clone https://github.com/Musaddiq-Sultan/TimeBomb/</code><br>
-• <code>cd cd TimeBomb/</code><br>
+• <code>cd TimeBomb/</code><br>
 • <code>bash setup</code>
 </p>
 
