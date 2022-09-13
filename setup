@@ -1,0 +1,22 @@
+#!/usr/bin/bash
+echo -e "1. Install\n2. Uninstall"
+read -p "Input: " input
+
+if [[ input -eq 1 ]]
+then
+
+sudo apt-get install python3 wget rtorrent -y
+echo "Copying files..."
+sudo cp timebomb /usr/bin
+echo "Adding permissions..."
+sudo chmod 777 /usr/bin/timebomb
+echo "timebomb installed"
+
+elif [[ input -eq 2 ]]
+then
+
+echo "Uninstalling..."
+sudo rm /usr/bin/timebomb
+echo "timebomb uninstalled"
+
+fi

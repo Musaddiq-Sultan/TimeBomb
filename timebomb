@@ -1,0 +1,83 @@
+#!/usr/bin/python3
+import os, time, sys
+from datetime import datetime
+try:
+    def direct():
+        os.system("clear")
+        ch = cm = cs = ""
+        print("\033[0;37;44mDirect Downloading\033[0;0;0m\n")
+        th = int(input("\033[0;30;43mHours:\033[0;32m "))
+        tm = int(input("\033[0;30;43mMinutes:\033[0;32m "))
+        os.system("clear")
+        while True:
+            now = datetime.now()
+            ch = int(now.strftime("%H"))
+            cm = int(now.strftime("%M"))
+            cs = int(now.strftime("%S"))
+            ttlcs = (ch*3600) + (cm*60) + cs
+            ttlts = (th*3600) + (tm*60) + 0
+            ttlrs = ttlts - ttlcs
+            if ttlts < ttlcs:
+                ttlrs = ((24*3600)-ttlcs)+ttlts
+            tr = str(int(ttlrs/3600)).zfill(2)+":"+str(int((ttlrs%3600)/60)).zfill(2)+":"+str(int(60-cs)).zfill(2)
+            print("\033[0;30;43mDownload Link:\033[0;34m ",str(sys.argv[2]))
+            print(now.strftime("\033[0;30;43mCurrent Time:\033[0;36m %H:%M:%S"))
+            print("\033[0;30;43mRemaining Time:\033[0;36m "+tr)
+            time.sleep(1)
+            os.system("clear")
+            if ttlcs == ttlts:
+                print("\033[3;34mStarting Download...\n\033[3;32m")
+                os.system("wget "+str(sys.argv[2]))
+                break
+    def torrent():
+        os.system("clear")
+        ch = cm = cs = ""
+        print("\033[0;37;44mTorrent Downloading\033[0;0;0m\n")
+        th = int(input("\033[0;30;43mHours:\033[0;32m "))
+        tm = int(input("\033[0;30;43mMinutes:\033[0;32m "))
+        os.system("clear")
+        while True:
+            now = datetime.now()
+            ch = int(now.strftime("%H"))
+            cm = int(now.strftime("%M"))
+            cs = int(now.strftime("%S"))
+            ttlcs = (ch*3600) + (cm*60) + cs
+            ttlts = (th*3600) + (tm*60) + 0
+            ttlrs = ttlts - ttlcs
+            if ttlts < ttlcs:                                           ttlrs = ((24*3600)-ttlcs)+ttlts
+            tr = str(int(ttlrs/3600)).zfill(2)+":"+str(int((ttlrs%3600)/60)).zfill(2)+":"+str(int(60-cs)).zfill(2)
+            print("\033[0;30;43mTorrent Path/Magnet Link:\033[0;34m ",str(sys.argv[2]))
+            print(now.strftime("\033[0;30;43mCurrent Time:\033[0;36m %H:%M:%S"))
+            print("\033[0;30;43mRemaining Time:\033[0;36m "+tr)
+            time.sleep(1)
+            os.system("clear")
+            if ttlcs == ttlts:
+                os.system('rtorrent "'+sys.argv[2]+'"')
+                break
+    option = sys.argv[1]
+    if option == "d" or option == "-d" or option == "--d":
+        direct()
+    elif option == "t" or option == "-t" or option == "--t":
+        torrent()
+    elif option == "help" or option == "-help" or option == "--help":
+        print('''\033[1;37;44mDescription:\033[0;0;0m
+\033[1;36mTimebomb\033[0;36m is a program used to download files at a specified time, it supports direct as well as torrent downloading.\033[0;0;0m
+
+\033[1;37;44mDependencies:\033[0;0;0m
+\033[1;36mwget\033[0;36m (For direct downloading)
+\033[1;36mrtorrent\033[0;36m (For torrent downloading)\033[0;0;0m
+    
+\033[1;37;44mUsage:\033[0;0;0m
+    
+\033[1;33mFor direct downloading use;\033[0;0;0m
+\033[0;33mtimebomb\033[0;0;0m \033[0;32md\033[0;0;0m \033[0;34m<Direct download link>\033[0;0;0m
+    
+\033[1;33mFor torrent downloading use;\033[0;0;0m
+\033[0;33mtimebomb\033[0;0;0m \033[0;32mt\033[0;0;0m \033[0;34m<Magnet link OR Path to torrent file>\033[0;0;0m
+\033[0;36m(Magnet link must be between quotation marks)
+    
+\033[1;37;44mProgrammed by\033[0;0;0m \033[1;33mMusaddiq Sultan\033[0;0;0m''')
+    else:
+        print('\033[3;31mWrong arguement given\n\033[0;32mTry "timebomb help"')
+except:
+    print('\033[3;31mAn error occured\033[0;0;0m\n\033[0;32mTry "timebomb help"')
