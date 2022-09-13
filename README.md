@@ -30,3 +30,6 @@
 <p>
 use <code>timebomb help</code> to get help
 </p>
+
+<h1>ScreenShot<h1>
+<img src="https://i.postimg.cc/jjTmcGbC/screenshot01.png" alt="Screen Shot Help">
