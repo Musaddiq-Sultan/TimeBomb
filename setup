@@ -1,22 +1,30 @@
 #!/usr/bin/bash
-echo -e "1. Install\n2. Uninstall"
+echo -e "[1] Install\n[2] Uninstall"
 read -p "Input: " input
 
 if [[ input -eq 1 ]]
 then
 
+echo "Installing Dependencies"
 sudo apt-get install python3 wget rtorrent -y
-echo "Copying files..."
+echo "Copying Files"
 sudo cp timebomb /usr/bin
-echo "Adding permissions..."
+echo "Adding Permissions"
 sudo chmod 755 /usr/bin/timebomb
-echo "timebomb installed"
+echo "Process Ended"
+read -p "Press Enter to finish"
 
 elif [[ input -eq 2 ]]
 then
 
-echo "Uninstalling..."
+echo "Removing TimeBomb"
 sudo rm /usr/bin/timebomb
-echo "timebomb uninstalled"
+echo "Process Ended"
+read -p "Press Enter to finish"
+
+else
+
+echo "Wrong Input, please retry"
+read -p "Press Enter to Exit"
 
 fi
