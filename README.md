@@ -12,7 +12,7 @@
 <h2>Easy Method</h2>
 <h3>Commands</h3>
 <p>
-• <code>git clone https://github.com/Musaddiq-Sultan/TimeBomb/</code><br>
+• <code>git clone https://github.com/Musaddiq-Sultan/TimeBomb</code><br>
 • <code>cd TimeBomb/</code><br>
 • <code>bash setup</code>
 </p>
@@ -20,7 +20,7 @@
 <h2>Custom Method</h2>
 <h3>Commands</h3>
 <p>
-• <code>git clone https://github.com/Musaddiq-Sultan/TimeBomb/</code><br>(<i>Clone into TimeBomb</i>)<br>
+• <code>git clone https://github.com/Musaddiq-Sultan/TimeBomb</code><br>(<i>Clone into TimeBomb</i>)<br>
 • <code>cd TimeBomb/</code><br>(<i>Enter TimeBomb directory</i>)<br>
 • <code>sudo cp timebomb /usr/bin/</code><br>(<i>Copy timebomb file to binaries directory</i>)<br>
 • <code>sudo chmod 755 /usr/bin/timebomb</code>(<i>Add permission</i>)<br>
