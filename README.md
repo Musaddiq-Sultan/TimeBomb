@@ -32,4 +32,4 @@ use <code>timebomb help</code> to get help
 </p>
 
 <h1>Preview<h1>
-<img src="https://i.postimg.cc/c4MFgnd8/TimeBomb.gif" alt="Screenshots Preview">
+<img src="https://i.postimg.cc/c4MFgnd8/TimeBomb.gif" alt="Screenshots Preview" class="center">
