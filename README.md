@@ -3,9 +3,9 @@
 
 <h1>Requirements</h1>
 <p>
-• python3<br>
-• wget<br>
-• rtorrent
+• <a href="https://www.python.org/">Python3</a><br>
+• <a href="https://www.gnu.org/software/wget/">Wget</a><br>
+  • <a href="http://rakshasa.github.io/rtorrent/">RTorrent</a>
 </p>
 
 <h1>Installation</h1>
