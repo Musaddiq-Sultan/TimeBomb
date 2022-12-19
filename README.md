@@ -5,7 +5,7 @@
 <p>
 • <a href="https://www.python.org/">Python3</a><br>
 • <a href="https://www.gnu.org/software/wget/">Wget</a><br>
-  • <a href="http://rakshasa.github.io/rtorrent/">RTorrent</a>
+• <a href="http://rakshasa.github.io/rtorrent/">RTorrent</a>
 </p>
 
 <h1>Installation</h1>
@@ -23,7 +23,7 @@
 • <code>git clone https://github.com/Musaddiq-Sultan/TimeBomb</code><br>(<i>Clone into TimeBomb</i>)<br>
 • <code>cd TimeBomb/</code><br>(<i>Enter TimeBomb directory</i>)<br>
 • <code>sudo cp timebomb /usr/bin/</code><br>(<i>Copy timebomb file to binaries directory</i>)<br>
-• <code>sudo chmod 755 /usr/bin/timebomb</code>(<i>Add permission</i>)<br>
+• <code>sudo chmod 755 /usr/bin/timebomb</code><br>(<i>Add permission</i>)<br>
 </p>
 
 <h1>Usage</h1>
